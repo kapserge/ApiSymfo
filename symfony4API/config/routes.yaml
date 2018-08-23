@@ -1,0 +1,18 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+# config\routes.yaml
+users:
+    type: rest
+    resource: App\Controller\UsersController
+    prefix : /api
+
+articles:
+    type: rest
+    resource: App\Controller\ArticlesController
+    prefix : /api
+
+app.swagger_ui:
+    path: /api/doc
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }

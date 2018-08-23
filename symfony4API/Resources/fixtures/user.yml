@@ -1,0 +1,12 @@
+App\Entity\User:
+    user_{1..10}:
+        firstname: <firstName()>
+        lastname: <lastName()>
+        email: <email()>
+        birthday: <dateTimeBetween('-100 years', '-10 years')>
+
+App\Entity\Article:
+    article_{0..12}:
+        user: '@user*'
+        title: <sentence()>
+        description: <sentence()>
